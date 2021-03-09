@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+It is app for project "codenamecrud.ru"
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
+* Ruby 2.7.2
 
 * Configuration
 
-* Database creation
+* Database SQLite3
 
-* Database initialization
+* rails test
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
