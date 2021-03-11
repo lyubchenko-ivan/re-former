@@ -21,10 +21,14 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
 
 
+
+
     if User.update(params[:id], user_params)
       redirect_to edit_user_path(params[:id])
     else
-      render :edit
+      render edit_user_path
+
+
     end
   end
 
@@ -32,6 +36,10 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+
+  def index
+    @users = User.limit(10)
+  end
 
   private
   def user_params
