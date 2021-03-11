@@ -1,0 +1,58 @@
+<!--<form method="post" action="/users" accept-charset="UTF-8" id="new-user">-->
+<!--  <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %> ">-->
+
+<!--  <div>-->
+<!--    <label for="username">Username:</label>-->
+<!--    <input name="user[username]" id="username" type="text">-->
+<!--  </div>-->
+
+
+<!--  <div>-->
+<!--    <label for="email">Email:</label>-->
+<!--    <input name="user[email]" id="email" type="email">-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <label for="password">Password:</label>-->
+<!--    <input name="user[password]" id="password" type="password">-->
+<!--  </div>-->
+
+<!--  <div>-->
+<!--    <input name="commit" type="submit" value="Отправить">-->
+<!--  </div>-->
+
+<!--</form>-->
+
+
+
+
+<%#= form_with url: '/users', method: :post do |form|  %>
+<%#= form.label :username, "Username: " %>
+<%#= form.text_field :username %>
+
+<%#= form.label :email, "Email: " %>
+<%#= form.email_field :email %>
+
+<%#= form.label :password, "Password: " %>
+<%#= form.password_field :password %>
+
+
+<%#= form.submit "Отправить" %>
+
+<%# end %>
+
+
+<%= form_with model: @user do |form| %>
+  <%= form.label :username, "Username: " %>
+  <%= form.text_field :username, placeholder: 'example' %><br>
+
+  <%= form.label :email, "Email: " %>
+  <%= form.email_field :email, placeholder: 'example@example.com' %><br>
+
+
+  <%= form.label :password, "Password: " %>
+  <%= form.password_field :password, placeholder: 'password' %><br>
+
+  <%= form.submit "Отправить" %><br>
+
+<% end %>

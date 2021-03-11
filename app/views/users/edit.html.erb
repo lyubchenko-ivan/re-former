@@ -1,0 +1,14 @@
+<%= form_for @user, method: :patch do |form| %>
+  <%= form.label :username, "Username: " %>
+  <%= form.text_field :username, value: "#{@user.username}" %><br>
+
+  <%= form.label :email, "Email: " %>
+  <%= form.email_field :email, value: "#{@user.email}" %><br>
+
+
+  <%= form.label :password, "Password: " %>
+  <%= form.password_field :password, value: "#{@user.password}" %><br>
+
+  <%= form.submit "Отправить" %><br>
+
+<% end %>
